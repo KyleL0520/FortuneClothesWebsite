@@ -1,0 +1,34 @@
+.favCart {
+    height: 22%;
+    width: 100%;
+    position: absolute;
+    top: 22%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+.favCart-row {
+    display: flex;
+    left: 2%;
+}
+
+.favCart-row img{
+    width: 40%;
+    height: 62%;
+    object-fit: cover;
+}
+
+div.removeBtn .line {
+    width: 28px;
+    height: 1px;
+    background-color: black;
+}
+
+div.removeBtn .line:nth-child(1) {
+    rotate: 45deg;  
+}
+
+div.removeBtn .line:nth-child(2) {
+    rotate: -45deg;  
+}

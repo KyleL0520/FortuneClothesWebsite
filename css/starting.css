@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(../fonts/Fraunces/Fraunces_72pt-Regular.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Fortune {
+    font-family: Fraunces, Helvetica, sans-serif;
+    font-size: 100px;
+    letter-spacing: 6px;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 3s steps(7),
+        cursor .4s step-end infinite alternate;
+    animation-fill-mode: forwards;
+}
+
+.change-place {
+    animation: changingPlace 1.5s forwards;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes changingPlace {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-260%);
+    }
+}

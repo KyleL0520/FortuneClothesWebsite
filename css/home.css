@@ -1,0 +1,201 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.manContainer,
+.womanContainer {
+    flex: 1;
+    position: relative;
+}
+
+.newMan,
+.newWoman {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.manContainer .newMan a,
+.womanContainer .newWoman a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+}
+
+.newMan img,
+.newWoman img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/*To make the image clickable*/
+.newMan img.active,
+.newWoman img.active {
+    display: block;
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideToTop {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideToBottom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/*Nav Man and Woman*/
+.manUnderLogo,
+.womanUnderLogo {
+    font-size: 150%;
+    position: absolute;
+    z-index: 10;
+    margin-top: 20%;
+}
+
+.manUnderLogo {
+    margin-left: 88%;
+}
+
+.womanUnderLogo {
+    margin-left: 6%;
+}
+
+/*Underline*/
+.navManMenu ul li a,
+.navWomanMenu ul li a {
+    position: relative;
+    transition: 0.7s ease-out;
+}
+
+.navManMenu ul li a::before,
+.navWomanMenu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+.navManMenu ul li a:hover:before,
+.navWomanMenu ul li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navManMenu,
+.navWomanMenu {
+    background-color: white;
+    position: fixed;  
+    z-index: 100;
+    width: 50vw;
+    height: 100vh;
+    transition: opacity 0.6s;
+    z-index: 99;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navManMenu ul li,
+.navWomanMenu ul li {
+    margin-bottom: 4%;
+}
+
+.navManMenu ul li a,
+.navWomanMenu ul li a {
+    display: inline-flex;
+    font-size: 120%;
+}
+
+.navManMenu ul,
+.navWomanMenu ul {
+    margin-top: 20%;
+}

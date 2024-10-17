@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../icon/Logo.png">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/product.css">
+    <script src="../../js/index.js/cursor.js" defer></script>
+    <script src="../../js/index.js/sidebar.js" defer></script>
+    <script src="../../js/index.js/footer.js" defer></script>
+    <script src="../../js/gsap.js/gsap.min.js"></script>
+    <script src="../../js/gsap.js/ScrollTrigger.min.js"></script>
+    <script src="../../js/shoppingCart.js" async></script>
+    <title>Product</title>
+</head>
+<body>
+    <header>
+
+        <nav>
+            <label for="toggle">
+                <input type="checkbox" id="toggle">
+                <div class="sideBar">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="firstSideBarList">
+
+                    <ul>
+                        <li class="man"><a href="All.html">MAN</a><img src="../../icon/Arrow Icon.png" alt="Arrow">
+                        </li>
+                        <li class="woman"><a href="../Woman/All.html">WOMAN</a><img
+                                src="../../icon/Arrow Icon.png" alt="Arrow"></li>
+                        <li><a href="../Favorite.html">FAVORITE</a></li>
+                        <li><a href="../Account.html">LOG IN</a></li>
+                        <li><a href="../Help.html">HELP</a></li>
+                        <li><a href="../AboutUs.html">ABOUT US</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="manSideBarList">
+
+                    <ul>
+                        <li><a href="../Man/Category/New.html">---NEW---</a></li>
+                        <li><a href="../Man/Category/BestSales.html">BEST SALES</a></li>
+                        <li><a href="../Man/Category/Shirts.html">SHIRTS</a></li>
+                        <li><a href="../Man/Category/T-Shirts.html">T-SHIRTS</a></li>
+                        <li><a href="../Man/Category/Suits.html">SUITS</a></li>
+                        <li><a href="../Man/Category/Coats.html">COATS</a></li>
+                        <li><a href="../Man/Category/Sweaters.html">SWEATERS</a></li>
+                        <li><a href="../Man/Category/Cardigans.html">CARDIGANS</a></li>
+                        <li><a href="../Man/Category/Shorts.html">SHORTS</a></li>
+                        <li><a href="../Man/Category/Trousers.html">TROUSERS</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="womanSideBarList">
+                    <ul>
+                        <li><a href="../../html/Woman/New.html">---NEW---</a></li>
+                        <li><a href="../../html/Woman/BestSales.html">BEST SALES</a></li>
+                        <li><a href="../../html/Woman/Dresses.html">DRESSES</a></li>
+                        <li><a href="../../html/Woman/Tops.html">TOPS</a></li>
+                        <li><a href="../../html/Woman/Shorts.html">SKIRTS</a></li>
+                        <li><a href="../../html/Woman/Shorts.html">SHORTS</a></li>
+                        <li><a href="../../html/Woman/Shirts.html">SHIRTS</a></li>
+                        <li><a href="../../html/Woman/T-Shirts.html">T-SHIRTS</a></li>
+                        <li><a href="../../html/Woman/Trousers.html">TROUSERS</a></li>
+                    </ul>
+                </div>
+            </label>
+
+            <div class="center"><a href="../../html/Home.html" class="Logo">Fortune</a></div>
+
+            <ul>
+                <li>
+                    <a href="../../html/Search.html"><img src="../../icon/Search Icon.png" alt="Search"></a>
+                    <a href="../../html/Account.html"><img src="../../icon/Account Icon.png" alt="Account"></a>
+                    <a href="../../html/Favorite.html"><img src="../../icon/Favorite Icon.png" alt="Favorite"></a>
+                    <a href="../../html/ShoppingBag.html"><img src="../../icon/ShoppingBag Icon.png" alt="Shopping Bag"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="circle"></div>
+    </header>
+
+    <div clas="slideImg">
+        <img src="../../image/man/Sample1.png" alt="Sample">
+        <img src="../../image/man/Sample2.png" alt="Sample">
+        <img src="../../image/man/Sample3.png" alt="Sample">
+        <img src="../../image/man/Sample4.png" alt="Sample">
+        <img src="../../image/man/Sample5.png" alt="Sample">
+    </div>
+    
+    <footer>
+        <form class="joinUs">
+            <label for="joinOurNewsletter">JOIN OUR NEWSLETTER</label>
+            <input type="email" name="joinOurNewsletter" id="joinOurNewsletterEmail" class="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                placeholder="Email Address">
+            <div class="genderSelection">
+                <input type="checkbox" name="gender" id="checkboxMan" checked>
+                <label for="checkboxMan">MAN</label>
+                <input type="checkbox" name="gender" id="checkboxWoman" checked>
+                <label for="checkboxWoman">WOMAN</label>
+                <p id="genderSelectionErrorMessage">Select a section that you want to join<br />You can select both
+                    sections</p>
+            </div>
+            <br />
+            <input type="submit" name="joinOurNewsletter" id="joinOurNewsletterSubmit" class="joinOurNewsletterSubmit" value="Submit">
+            <p class="emailErrorMessage">Enter a valid email address</p>
+            <p class="emailEmptyErrorMessage">Enter an email address</p>
+            <p id="successfullMessage">You have joined our newsletter</p>
+        </form>
+
+        <div class="footerMenu">
+            <div class="account">
+                <label><strong>ACCOUNT</strong></label>
+                <ul>
+                    <li><a href="">LOG IN</a></li>
+                    <li><a href="">SIGN UP</a></li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <label><strong>HELP</strong></label>
+                <ul>
+                    <li><a href="">SIZES</a></li>
+                    <li><a href="">SHIPPING</a></li>
+                    <li><a href="">REFUNDS</a></li>
+                    <li><a href="">RETURNS AND EXCHANGES</a></li>
+                    <li><a href="">PAYMENT AND INVOICE</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">TERMS AND CONDITION</a></li>
+                </ul>
+            </div>
+
+            <div class="aboutUs">
+                <label><strong>ABOUT US</strong></label>
+                <ul>
+                    <li><a href="">COMPANY</a></li>
+                    <li><a href="">STORES</a></li>
+                </ul>
+            </div>
+
+            <div class="followUs">
+                <label><strong>FOLLOW US</strong></label>
+                <ul>
+                    <li><a href="">INSTAGRAM</a></li>
+                    <li><a href="">FACEBOOK</a></li>
+                    <li><a href="">TIKTOK</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

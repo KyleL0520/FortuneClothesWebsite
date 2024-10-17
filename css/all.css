@@ -1,0 +1,274 @@
+/*Category Selection*/
+.categorySelection {
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.categorySelection ul{
+    margin-left: 13%;
+    display: flex;
+}
+
+.categorySelection ul li{
+    border: 1px solid black;
+    padding: 5px 18px;
+    margin-left: 1%;
+}
+
+/*Filter*/
+.filter {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5%;
+    margin-left: 50%;   
+}
+
+.filterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 40px;
+    transition: opacity 1s ease;
+}
+
+.filter:hover {
+    margin-left: 40%;
+    padding-left: 10%;
+    padding-right: 10%
+}
+
+.filter:hover .filterContainer {
+    opacity: 0;
+}
+
+.filter-icon {
+    display: flex;
+    align-items: center;
+}
+
+.filter-icon:nth-child(2) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.filter-icon:nth-child(2) .filterCircle {
+    margin-right: 7px;
+}
+
+.filter .filterCircle {
+    margin-left: 7px;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.filter .bar {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.filterFunction {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: -6px;
+    margin-left: -2.5%;
+}
+
+.filterFunction > div {
+    margin-left: 1.5%;
+    background-color: white;
+    position: absolute;
+    border: 1px solid black;
+    padding: 5px 18px;
+    opacity: 0;
+    z-index: 1;
+    transition: margin 1s ease-out, width 1s ease-out, opacity 1s ease, transform 1s ease;
+}
+
+.filter:hover .filterFunction > div {
+    opacity: 1;
+}
+
+.filter:hover .filterFunction div.sizes {
+    transform: translateX(-55%);
+}
+
+.filter:hover .filterFunction div.price {
+    transform: translateX(55%);
+}
+
+.filterFunction div.sizes,
+.filterFunction div.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Sizes*/
+.filterFunction div.sizes {
+    width: 1%;
+}
+
+.filterFunction div.sizes input {
+    width: 30%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+    margin-left: 3%;
+    transition: border 0.15s ease, opacity 0.5s ease;
+    opacity: 0;
+    position: absolute;
+}
+
+.filter div.sizes input:hover {
+    border: 1px solid transparent;
+}
+
+/*Price*/
+.filterFunction div.price {
+    width: 1.5%;
+}
+
+.rangeContainer {
+    margin-left: 20%;
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s ease;
+}
+
+.slider {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(180, 167, 167);
+    border-radius: 2px;
+    position: relative;
+}
+
+.slider .progress {
+    height: 100%;
+    left: 0;
+    right: 0%;
+    position: absolute;
+    border-radius: 2px;
+    background: black;
+}
+
+.rangeContainer .value {
+    position: absolute;
+}
+
+.rangeContainer .value.left {
+    left: -50px;
+}
+
+.rangeContainer .value.right {
+    right: -50px;
+}
+
+.range-input {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.range-input input {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+
+}
+
+/*Thumb*/
+input[type="range"]::-webkit-slider-thumb {
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    background: black;
+}
+
+/*productContainer*/
+.productContainer {
+    position: relative;
+    margin-top: 2%;
+    width: 100%;
+    font-size: 13px;
+}
+
+/*Row*/
+.row {
+    margin-top: 1%;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row > div {
+    padding: 2px;
+    height: 10%;
+    flex: 1 0;
+}
+
+.row img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+/*Product*/
+
+
+/*Product Info*/
+.productInfo {
+    width: 100%;
+    display: flex;
+    padding: 5px 30px 3px 14px;
+}
+
+
+/*Star*/
+.star {
+    margin-top: 12px;
+    margin-left: 200px;
+}
+
+.starIn {
+    z-index: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.starBorder {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}

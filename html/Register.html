@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icon/Logo.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/index.js/cursor.js" defer></script>
+    <script src="../js/index.js/sidebar.js" defer></script>
+    <script src="../js/index.js/footer.js" defer></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/gsap.js/gsap.min.js"></script>
+    <script src="../js/gsap.js/ScrollTrigger.min.js"></script>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <label for="toggle">
+                <input type="checkbox" id="toggle">
+                <div class="sideBar">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="firstSideBarList">
+
+                    <ul>
+                        <li class="man"><a href="../html/Man/Category/All.html">MAN</a><img src="../icon/Arrow Icon.png"
+                                alt="Arrow">
+                        </li>
+                        <li class="woman"><a href="../html/Woman/All.html">WOMAN</a><img
+                                src="../../../icon/Arrow Icon.png" alt="Arrow"></li>
+                        <li><a href="../html/Favorite.html">FAVORITE</a></li>
+                        <li><a href="../html/Account.html">LOG IN</a></li>
+                        <li><a href="../html/Help.html">HELP</a></li>
+                        <li><a href="../html/AboutUs.html">ABOUT US</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="manSideBarList">
+
+                    <ul>
+                        <li><a href="../html/Man/Category/New.html">---NEW---</a></li>
+                        <li><a href="../html/Man/Category/BestSales.html">BEST SALES</a></li>
+                        <li><a href="../html/Man/Category/T-Shirts.html">SHIRTS</a></li>
+                        <li><a href="../html/Man/Category/T-Shirts.html">T-SHIRTS</a></li>
+                        <li><a href="../html/Man/Category/Suits.html">SUITS</a></li>
+                        <li><a href="../html/Man/Category/Coats.html">COATS</a></li>
+                        <li><a href="../html/Man/Category/Sweaters.html">SWEATERS</a></li>
+                        <li><a href="../html/Man/Category/Cardigans.html">CARDIGANS</a></li>
+                        <li><a href="../html/Man/Category/Shorts.html">SHORTS</a></li>
+                        <li><a href="../html/Man/Category/Trousers.html">TROUSERS</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="womanSideBarList">
+                    <ul>
+                        <li><a href="../html/Woman/New.html">---NEW---</a></li>
+                        <li><a href="../html/Woman/Woman/BestSales.html">BEST SALES</a></li>
+                        <li><a href="../html/Woman/Woman/Dresses.html">DRESSES</a></li>
+                        <li><a href="../html/Woman/Woman/Tops.html">TOPS</a></li>
+                        <li><a href="../html/Woman/Woman/Shorts.html">SKIRTS</a></li>
+                        <li><a href="../html/Woman/Woman/Shorts.html">SHORTS</a></li>
+                        <li><a href="../html/Woman/Woman/Shirts.html">SHIRTS</a></li>
+                        <li><a href="../html/Woman/Woman/T-Shirts.html">T-SHIRTS</a></li>
+                        <li><a href="../html/Woman/Woman/Trousers.html">TROUSERS</a></li>
+                    </ul>
+                </div>
+            </label>
+
+            <div class="center"><a href="../html/Home.html" class="Logo">Fortune</a></div>
+
+            <ul>
+                <li>
+                    <a href="../html/Search.html"><img src="../icon/Search Icon.png" alt="Search"></a>
+                    <a href="../html/Account.html"><img src="../icon/Account Icon.png" alt="Account"></a>
+                    <a href="../html/Favorite.html"><img src="../icon/Favorite Icon.png" alt="Favorite"></a>
+                    <a href="../html/ShoppingBag.html"><img src="../icon/ShoppingBag Icon.png" alt="Shopping Bag"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="circle"></div>
+    </header>
+
+    <form class="signUp">
+        <label for="signUp">SIGN UP</label>
+        <input type="email" name="signUp" id="signUpEmail" class="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            placeholder="Email Address">
+        <p class="emailErrorMessage">Enter a valid email address</p>
+        <p class="emailEmptyErrorMessage">Enter an email address</p>
+        <input type="password" name="signUp" id="signUpPassword" class="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%^&*_=+\-])[a-zA-Z0-9!@#\$%^&*_=+\-]{8,12}$" placeholder="Password">
+        <p class="passwordFormatErrorMessage">At Least 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol. Min 8 characters and Max 12 characters</p>
+        <p class="passwordEmptyErrorMessage">Enter a password</p>
+        <div class="agreeStatement">
+            <input type="checkbox" name="agreeCheckbox" id="acceptEmail">
+            <label for="acceptEmail">I would like to receive Fortune news update via email</label>
+            <br>
+            <input type="checkbox" name="agreeCheckbox" id="acceptPrivacyPolicy">
+            <label for="acceptPrivacyPolicy">I accept the&nbsp<a href="#">Privacy Policy</a></label>
+            <p class="policyErrorMessage">You must accept the privacy policy</p>
+        </div>
+        <input type="submit" name="signUp" id="signUpSubmit" class="signUpSubmit" value="SIGN UP">
+    </form>
+
+    <footer>
+        <form class="joinUs">
+            <label for="joinOurNewsletter">JOIN OUR NEWSLETTER</label>
+            <input type="email" name="joinOurNewsletter" id="joinOurNewsletterEmail" class="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                placeholder="Email Address">
+            <div class="genderSelection">
+                <input type="checkbox" name="gender" id="checkboxMan" checked>
+                <label for="checkboxMan">MAN</label>
+                <input type="checkbox" name="gender" id="checkboxWoman" checked>
+                <label for="checkboxWoman">WOMAN</label>
+                <p id="genderSelectionErrorMessage">Select a section that you want to join<br />You can select both
+                    sections</p>
+            </div>
+            <br />
+            <input type="submit" name="joinOurNewsletter" id="joinOurNewsletterSubmit" class="joinOurNewsletterSubmit" value="Submit">
+            <p class="emailErrorMessage">Enter a valid email address</p>
+            <p class="emailEmptyErrorMessage">Enter an email address</p>
+            <p id="successfullMessage">You have joined our newsletter</p>
+        </form>
+
+        <div class="footerMenu">
+            <div class="account">
+                <label><strong>ACCOUNT</strong></label>
+                <ul>
+                    <li><a href="">LOG IN</a></li>
+                    <li><a href="">SIGN UP</a></li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <label><strong>HELP</strong></label>
+                <ul>
+                    <li><a href="">SIZES</a></li>
+                    <li><a href="">SHIPPING</a></li>
+                    <li><a href="">REFUNDS</a></li>
+                    <li><a href="">RETURNS AND EXCHANGES</a></li>
+                    <li><a href="">PAYMENT AND INVOICE</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">TERMS AND CONDITION</a></li>
+                </ul>
+            </div>
+
+            <div class="aboutUs">
+                <label><strong>ABOUT US</strong></label>
+                <ul>
+                    <li><a href="">COMPANY</a></li>
+                    <li><a href="">STORES</a></li>
+                </ul>
+            </div>
+
+            <div class="followUs">
+                <label><strong>FOLLOW US</strong></label>
+                <ul>
+                    <li><a href="">INSTAGRAM</a></li>
+                    <li><a href="">FACEBOOK</a></li>
+                    <li><a href="">TIKTOK</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

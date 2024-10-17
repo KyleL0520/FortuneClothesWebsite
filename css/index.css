@@ -1,0 +1,473 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(../fonts/Fraunces/Fraunces_72pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: FrauncesLight;
+    src: url(../fonts/Fraunces/Fraunces_72pt-Light.ttf);
+}
+
+@font-face {
+    font-family: Dm Sans;
+    src: url(../fonts/DmSans/DMSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Dm Sans, Helvetica, sans-serif;
+    cursor: none;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*Cursor*/
+header .circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+    z-index: 1000;
+}
+
+ul li:hover ~ .circle {
+    transform: scale(2);
+}
+
+header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*Logo*/
+header .Logo {
+    font-family: Fraunces, Helvetica, sans-serif;
+    font-size: 100px;
+    letter-spacing: 6px;
+    margin-left: 45%;
+    z-index: -1;
+}
+
+/*Nav Icon*/
+header nav ul li {
+    margin-right: 50px;
+}
+
+header nav ul li a img {
+    margin-right: 30px;
+    height: 25px;
+}
+
+/*Side Bar*/
+header nav label input {
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+
+/*Side Bar icon*/
+header nav label div.sideBar {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    padding-top: 1%;
+    margin-left: 2%;
+    z-index: 100;
+}
+
+header nav label div.line {
+    width: 28px;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+
+}
+
+/*Animation : Side Bar Check Box Change to Cross*/
+header nav label input:checked~.sideBar .line:nth-child(1) {
+    position: absolute;
+    left: 2px;
+    top: 25px;
+    width: 28px;
+    animation: changeCross1 1.2s forwards;
+}
+
+header nav label input:checked~.sideBar .line:nth-child(3) {
+    position: absolute;
+    left: 2px;
+    top: 25px;
+    width: 28px;
+    animation: changeCross2 1.2s forwards;
+}
+
+header nav label input:checked~.sideBar .line:nth-child(2) {
+    opacity: 0;
+}
+
+header nav label input:checked~.firstSideBarList {
+    transform: translateX(0);
+}
+
+@keyframes changeCross1 {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(45deg);}
+}
+
+@keyframes changeCross2 {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(-45deg);}
+}
+
+/*Animation : Side Bar flow as water when hover*/
+header nav label input:not(:checked)~.sideBar:hover .line:nth-child(1) {
+    animation: flow1 1.2s infinite;
+}
+
+header nav label input:not(:checked)~.sideBar:hover .line:nth-child(2) {
+    animation: flow2 1.2s infinite;
+}
+
+header nav label input:not(:checked)~.sideBar:hover .line:nth-child(3) {
+    animation: flow3 1.2s infinite;
+}
+
+@keyframes flow1 {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(2px);}
+    20% {transform: translateX(3px);}
+    30% {transform: translateX(5px);}
+    40% {transform: translateX(8px);}
+    50% {transform: translateX(10px);}
+    60% {transform: translateX(8px);}
+    70% {transform: translateX(6px);}
+    80% {transform: translateX(4px);}
+    90% {transform: translateX(2px);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes flow2 {
+    0% {transform: translateX(3px);}
+    10% {transform: translateX(5px);}
+    20% {transform: translateX(8px);}
+    30% {transform: translateX(10px);}
+    40% {transform: translateX(8px);}
+    50% {transform: translateX(6px);}
+    60% {transform: translateX(4px);}
+    70% {transform: translateX(2px);}
+    80% {transform: translateX(0);}
+    90% {transform: translateX(2px);}
+    100% {transform: translateX(4px);}
+}
+
+@keyframes flow3 {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(2px);}
+    20% {transform: translateX(3px);}
+    30% {transform: translateX(5px);}
+    40% {transform: translateX(8px);}
+    50% {transform: translateX(10px);}
+    60% {transform: translateX(8px);}
+    70% {transform: translateX(6px);}
+    80% {transform: translateX(4px);}
+    90% {transform: translateX(2px);}
+    100% {transform: translateX(0);}
+}
+
+
+/*First Side Bar List*/
+header nav label .firstSideBarList {
+    height: 100%;
+    width: 25%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    transition: 0.8s ease;
+    transform: translateX(-125%);
+    box-shadow: 0 0 2px grey;
+    z-index: 99;
+}
+
+header nav label div.firstSideBarList ul,
+header nav label div.manSideBarList ul,
+header nav label div.womanSideBarList ul {
+    margin-top: 40%;
+}
+
+header nav label div.firstSideBarList ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10% 15%;
+    font-size: 160%;
+}
+
+
+header nav label div.firstSideBarList ul li a,
+header nav label div.manSideBarList ul li a,
+header nav label div.womanSideBarList ul li a {
+    text-decoration: none;
+    position: relative;
+    transition: 0.7s ease-out;
+}
+
+/*the element should be relative*/
+/*Underline*/
+header nav label div.firstSideBarList ul li a::before,
+header nav label div.manSideBarList ul li a::before,
+header nav label div.womanSideBarList ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+header nav label div.firstSideBarList ul li a:hover:before,
+header nav label div.manSideBarList ul li a:hover:before,
+header nav label div.womanSideBarList ul li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+header nav label div.firstSideBarList img {
+    height: 15px;
+    transition: transform 0.5s ease;
+}
+
+/*Man and Woman Side Bar List*/
+header nav label div.manSideBarList,
+header nav label div.womanSideBarList {
+    height: 100%;
+    width: 25%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    transition: transform 0.8s ease-out;
+    transform: translateX(-100%);
+    box-shadow: 0 0 2px grey;
+    z-index: 98;
+}
+
+header nav label div.manSideBarList ul li,
+header nav label div.womanSideBarList ul li {
+    margin: 9% 15%;
+}
+
+header nav label div.manSideBarList ul li a,
+header nav label div.womanSideBarList ul li a {
+    font-size: 140%;
+}
+
+footer {
+    padding: 1%;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+footer div.footerMenu {
+    display: flex;
+}
+
+footer div label,
+footer form label {
+    display: block;
+}
+
+/*Join our newsletter*/
+footer form.joinUs {
+    margin-top: 15%;
+    margin-left: 25%;
+    height: 20%;
+    width: 100%;
+}
+
+footer form.joinUs label {
+    font-size: 160%;
+    margin-bottom: 3%;
+}
+
+footer form.joinUs div.genderSelection {
+    position: absolute;
+    margin-left: 45%;
+    margin-top: -4%;
+}
+
+footer form.joinUs div.genderSelection input {
+    margin-bottom: 10%;
+}
+
+footer form.joinUs div.genderSelection label {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+footer form.joinUs div.genderSelection input[type="checkbox"] {
+    display: none;
+}
+
+footer form.joinUs div.genderSelection label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    margin-right: 10px;
+    background-color: white;
+
+}
+
+footer form.joinUs div.genderSelection input[type="checkbox"]:checked + label::before {
+    content: '✔';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: black;
+}
+
+footer form.joinUs input.email {
+    border: none;
+    border-bottom: 1px solid rgb(141, 140, 140);
+    width: 40%;
+    padding: 7px;
+    font-size: 100%;
+    letter-spacing: 1px;
+}
+
+footer form.joinUs input.email:focus {
+    outline: none;
+}
+
+footer form.joinUs .email::-webkit-input-placeholder {
+    color: rgb(168, 166, 166);
+}
+
+footer form.joinUs input.joinOurNewsletterSubmit {
+    margin-top: 1.5%;
+    border: 1px solid black;
+    background-color: white;
+    height: 20%;
+    width: 41%;
+}
+
+footer form.joinUs .genderSelection p#genderSelectionErrorMessage {
+    color: red;
+    font-size: 90%;
+    display: none;
+}
+
+footer form.joinUs p#successfullMessage {
+    padding: 8px 90px;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: -16%;
+    font-size: 100%;
+    background-color: rgba(212, 205, 205, 0.6);
+    transition: 0.8s ease;
+    opacity: 0.9;
+    display: none;
+}
+
+.emailErrorMessage {
+    color: red;
+    font-size: 80%;
+    padding-top: 0.5%;
+    display: none;
+}
+
+.emailEmptyErrorMessage {
+    color: red;
+    font-size: 80%;
+    padding-top: 0.5%;
+    display: none;
+}
+
+/*Footer menu*/
+footer div.footerMenu{
+    margin-left: 17%;
+    padding-top: 5%;
+    font-size: 14px;
+}
+
+footer div.footerMenu div {
+    margin-left: 10%;
+}
+
+footer div.footerMenu label {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+footer div ul li {
+    margin-top: 18px;
+}
+
+footer div ul li a{
+    position: relative;
+    transition: 0.7s ease-out;
+}
+
+footer div ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+footer div ul li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}

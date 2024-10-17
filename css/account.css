@@ -1,0 +1,87 @@
+@font-face {
+    font-family: FrauncesLight;
+    src: url(../fonts/Fraunces/Fraunces_72pt-Light.ttf);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogIn {
+    margin-top: 12%;
+}
+
+.LogIn label {
+    font-family: FrauncesLight, Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+
+.LogIn .email,
+.LogIn .password {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    padding-bottom: 10px;
+    width: 35%;
+    border: none;
+    border-bottom: 1px solid rgb(141, 140, 140);
+}
+
+.LogIn .email:focus,
+.LogIn .password:focus {
+    outline: none;
+}
+
+.LogIn .email::-webkit-input-placeholder,
+.LogIn .password::-webkit-input-placeholder {
+    color: rgb(168, 166, 166);
+}
+
+.LogIn .submit {
+    margin-top: 3%;
+}
+
+.LogIn .submit,
+.newAccount .register {
+    width: 35%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.LogIn .forgottenPassword {
+    margin-top: 1.2%;
+    margin-left: -27%;
+    color: rgb(168, 166, 166);
+}
+
+.newAccount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.newAccount label {
+    font-family: FrauncesLight, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.newAccount a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newAccount .register {
+    margin-top: 2%;
+}
